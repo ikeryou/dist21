@@ -1,0 +1,49 @@
+@import 'nib'
+global-reset()
+
+body {
+  font-family: 'Anton', sans-serif;
+}
+
+.mv {
+  position: fixed;
+}
+
+.ttl {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: difference;
+}
+
+.ttl p {
+  margin-top: 2vmax;
+  font-size: 7.5vmax;
+  color: #FFF;
+  letter-spacing: 0.01em;
+}
+
+.ttl > .dot {
+  position: relative;
+  width: 17vmax;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.ttl > .dot:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.ttl > .dot > .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
