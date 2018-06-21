@@ -35,7 +35,7 @@ class Param
       easing:{value:'Elastic', list:[
         'Expo',
         'Elastic'
-      ]}
+      ], use:false}
     }
 
     @dom = {
@@ -61,19 +61,19 @@ class Param
 
     Update.add(@_update)
 
-    if !Conf.FLG.PARAM
-      return
+    if Conf.FLG.PARAM
 
-    # 初期値
-    @all.bgColor.value = 0xffffff
-    @light.move.value = false
-    @mesh.move.value = 0
-    # @mesh.around.value = false
-    @mesh.guruguru.value = false
-    @mesh.small.value = false
-    @mesh.noise.value = false
-    @mesh.color.value = false
-    @dom.ttl.value = false
+
+      # 初期値
+      @all.bgColor.value = 0xffffff
+      @light.move.value = false
+      @mesh.move.value = 0
+      # @mesh.around.value = false
+      @mesh.guruguru.value = false
+      @mesh.small.value = false
+      @mesh.noise.value = false
+      @mesh.color.value = false
+      @dom.ttl.value = false
 
     @_gui = new dat.GUI()
     @_addGui(@mesh, 'mesh')

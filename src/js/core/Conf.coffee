@@ -10,8 +10,8 @@ class Conf
 
     # フラグ関連
     @FLG = {
-      PARAM:location.href.indexOf('p=1') > 0
-      STATS:location.href.indexOf('p=1') > 0
+      PARAM:location.href.indexOf('p=1') > 0 || location.href.indexOf('localhost') > 0
+      STATS:location.href.indexOf('p=1') > 0 || location.href.indexOf('localhost') > 0
     };
 
     # 本番フラグがtrueの場合、フラグ関連は全てfalseに

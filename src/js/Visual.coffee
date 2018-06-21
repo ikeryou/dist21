@@ -74,10 +74,10 @@ class Generate extends Canvas
   # -----------------------------------------------
   _update: =>
 
+    cnt = Update.cnt
+
     sw = window.innerWidth
     sh = window.innerHeight
-
-    cnt = Update.cnt
 
     if Param.light.move.value
       radian = cnt * 0.9
